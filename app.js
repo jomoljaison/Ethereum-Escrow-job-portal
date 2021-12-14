@@ -86,7 +86,7 @@ var edit = require("./routes/edit");
 var MyContractJSON  = require(path.join(__dirname, 'build/contracts/esrowboss.json'));
 var Web3 = require("web3");
 const web3 = new Web3('http://localhost:7545');
-accountAddress = "0x3218100a9388DAF06C305928f038731392743B0B"; //Ganache
+accountAddress = ""; //Ganache
 const contractAddress = MyContractJSON.networks['5777'].address;
 const contractAbi = MyContractJSON.abi;
 
