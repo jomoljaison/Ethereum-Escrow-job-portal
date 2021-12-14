@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <title></title>
+</head>
+
+<body style="background:url('/imlastnames/bg.png')  no-repeat center center fixed; background-size: 100%;">
+
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:rgb(12, 172, 132)">
+    <!-- <a class="navbar-brand" href="#">Employee Registration Portal</a> -->
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+      
+        </li>
+        <!-- <li class="nav-item active">
+          <a class="nav-link" href="/">Registration <span class="sr-only">(current)</span></a>
+        </li> -->
+       
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="/search">Search</a>
+        </li> -->
+
+<!-- 
+        <li class="nav-item">
+          <a class="nav-link" href="/managerview">Manager</a>
+        </li> -->
+
+<!-- 
+        <li class="nav-item">
+          <a class="nav-link" href="/getwork">Employee</a>
+        </li> -->
+
+        <!-- <li class="nav-item">
+        <a class="nav-link" href="/addjob">Post JOB</a><br/><br/>
+</li> -->
+
+<li class="nav-item">
+  <a class="nav-link" href="/managerview">Manager</a>
+</li>
+
+<li class="nav-item">
+  <a class="nav-link" href="/addjob">Post JOB</a><br/><br/>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link" href="/viewjob">View JOB</a><br/><br/>
+  </li>
+  
+
+
+  <li class="nav-item">
+    <a class="nav-link" href="/viewemp">View xxEmployee</a><br/><br/>
+  </li>
+  
+  <li class="nav-item">
+    <a class="nav-link" href="/logout">logout</a><br/><br/>
+  </li>
+  
+    
+<!-- 
+  <li class="nav-item">
+    <a class="nav-link" href="/searchjob">Search Job</a><br/><br/>
+  </li>
+  
+     -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <li>
+      
+    </li>
+   
+      </ul>
+    </div>
+  </nav>
+ 
+    <div class="card"> 
+      
+        <form >
+          <table>
+    
+     
+
+        <% employee.forEach(function(user){ %></option> 
+          <tr>
+       <th> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name</th> 
+       <th> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email</th>
+       <th> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Country</th>
+       <th> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Designation</th>
+         </tr>
+      
+          <tr>  <td><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <%= user.firstname %> 
+                <%= user.lastname %>
+            </td>
+            <td><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <%= user.email %>
+            </td>
+            <td><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <%= user.country %>
+            </td>
+         
+            <td><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <%= user.designation %>
+            </td>
+         
+             <td></td>        
+    </tr>
+        <thead>
+         
+            
+        </thead>
+
+
+
+      <% }); %>
+   
+  </table>
+      </form>
+    </div>
+
+</body>
+</html>

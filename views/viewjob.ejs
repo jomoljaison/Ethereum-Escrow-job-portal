@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <title></title>
+</head>
+
+<body style="background:url('/imlastnames/bg.png')  no-repeat center center fixed; background-size: 100%;">
+
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:rgb(12, 172, 132)">
+    <!-- <a class="navbar-brand" href="#">Employee Registration Portal</a> -->
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <h3>Company Portal <span class="sr-only">(current)</span></a>
+          </h3> </li>
+        <!-- <li class="nav-item active">
+          <a class="nav-link" href="/">Registration <span class="sr-only">(current)</span></a>
+        </li> -->
+<!--         
+        <li class="nav-item">
+          <a class="nav-link" href="/search">Search</a>
+        </li> -->
+
+
+
+        <!-- <li class="nav-item">
+        <a class="nav-link" href="/addjob">Post JOB</a><br/><br/>
+</li> -->
+
+<!-- 
+<li class="nav-item">
+  <a class="nav-link" href="/addjob">Post JOB</a><br/><br/>
+</li> -->
+
+
+<li class="nav-item">
+<a class="nav-link" href="/viewjob">View JOB</a><br/><br/>
+</li>
+
+
+
+<li class="nav-item">
+<a class="nav-link" href="/viewemp">View Employee</a><br/><br/>
+</li>
+
+<li class="nav-item">
+  <a class="nav-link" href="/logout">logout</a><br/><br/>
+</li>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<!-- 
+<li class="nav-item">
+  <a class="nav-link" href="/searchjob">Search Job</a><br/><br/>
+</li> -->
+<li>
+  <form class="d-flex" method="POST" action="/searchjob" novalidate>
+    <input class="form-control me-2" type="search" placeholder="Sexxaxxrch" name="search" aria-label="Sexxarch">
+    <input type="submit" value="Find Job" class="btn btn-block btn-success" />
+  </form>
+</li>
+      </ul>
+    </div>
+    
+    
+  </nav>
+ 
+    <div class="card"> 
+        <!-- <div class="card-header">
+            <ul class="nav nav-pills w-100">
+                <li class="nav-pill active">
+                    <a class="nav-link">Books</a>
+                </li>
+                <li class="nav-pill ml-auto">
+                    <a class="nav-link active" href="/books/add">Add Book</a>
+                </li>
+            </ul>
+        </div> -->
+
+
+        <form action="/ab">
+          <table>
+          
+<!--         
+        <% if(escrow.length) { %>
+        <table class="table">
+            <thead>
+                <tr>
+                  
+                  <th scope="col">JOB</th>
+                  <th scope="col">JOB</th>
+                   
+                </tr>
+            </thead>
+            <tbody>
+            <% for(var i = 0; i< escrow.length; i++) { %>
+                <tr>
+                    <th scope="row"><%= (i+1) %></th>
+                   <td><%= escrow[i].jobname%></td> -->
+                    <!-- <td><%= escrow[i].location%></td> 
+                    <td><%= escrow[i].jtype%></td> 
+                    <td><%= escrow[i].jd%></td> 
+                    <td><%= escrow[i].abtcompany%></td>  -->
+                    <!-- <td> -->
+     <!-- <a href="edit/<%=escrow[i].id%>"><%= escrow[i].jobname%></a>                        -->
+                 
+     <!-- <a href="edit/<%= escrow[i].id %>" > <%= escrow.jobname %></a> -->
+
+                    <!-- </td>
+                </tr>
+            <% } %>
+            </tbody>
+        </table>
+        <% } %> -->
+     
+<tbody>
+        <% escrow.forEach(function(user){ %></option> 
+          <tr>
+            <!-- jobname,location,jtype,jd,abtcompany -->
+            <th> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Job</th>  <td> 
+        <a href="edit/<%= user.id %>" > <%= user.jobname %></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </td></tr>
+        <thead>
+          <tr>
+                        <!-- jobname,location,jtype,jd,abtcompany -->
+
+                                 
+          </tr>
+        </thead>
+
+<tr>  <th> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Location              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><td><%= user.location %></td>   </tr>
+<tr>  <th> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Job type              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th> <td><%= user.jtype %></td>       </tr>     
+<tr>  <th> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Job Description       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th> <td><%= user.jd %></td>   </tr>
+<tr>  <th> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About Company         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th> <td><%= user.abtcompany %></td>    </tr>        
+
+<tr>  
+  <td>
+    <hr >  <hr > 
+        </td>
+          </tr>
+      <% }); %>
+    </tbody>
+  </table>
+      </form>
+    </div>
+
+</body>
+</html>

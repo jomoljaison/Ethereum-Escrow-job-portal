@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <title></title>
+</head>
+
+<body style="background:url('/imlastnames/bg.png')  no-repeat center center fixed; background-size: 100%;">
+
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:rgb(12, 172, 132)">
+    <!-- <a class="navbar-brand" href="#">Employee Registration Portal</a> -->
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <h3><a class="nav-link" href="/">Employee  Portal <span class="sr-only">(current)</span></a>
+          </h3> </li>
+        <!-- <li class="nav-item active">
+          <a class="nav-link" href="/">Registration <span class="sr-only">(current)</span></a>
+        </li> -->
+        
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="/search">Search</a>
+        </li> -->
+
+
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="/managerview">Manager</a>
+        </li> -->
+
+
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="/getwork">Employee</a>
+        </li> -->
+
+        <!-- <li class="nav-item">
+        <a class="nav-link" href="/addjob">Post JOB</a><br/><br/>
+</li> -->
+
+
+<li class="nav-item">
+  <a class="nav-link" href="/viewjob">View JOB</a><br/><br/>
+</li>
+
+
+<li class="nav-item">
+  <a class="nav-link" href="/viewemp">View Employee</a><br/><br/>
+</li>
+
+<li class="nav-item">
+  <a class="nav-link" href="/logout">logout</a><br/><br/>
+</li>
+
+<!-- 
+<li class="nav-item">
+  <a class="nav-link" href="/searchjob">Search Job</a><br/><br/>
+</li> -->
+
+      </ul>
+    </div>
+  </nav>
+
+
+    <div class="container" style="padding-top: 5%;">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8" style="border : 1px black solid; background-color:rgb(158, 170, 240);">
+                <div class="row mb-3 mt-4">
+                    <div class="col-12" style="text-align : center;">
+                        <h2>  <td><%= result.firstname %>'s  </td>Registered Details</h2>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>First Name</th>
+                                <td><%= result.firstname %></td>
+                            </tr>
+                            <tr>
+                                <th>Last Name</th>
+                                <td><%= result.lastname %></td>
+                            </tr>
+                        
+                            <tr>
+                                <th>email</th>
+                                <td><%= result.email %></td>
+                            </tr>
+
+                         
+                            <tr>
+                                <th>ph</th>
+                                <td><%= result.ph %></td>
+                            </tr>
+                            <tr>
+                                <th>country</th>
+                                <td><%= result.country %></td>
+                            </tr>
+
+                            <tr>
+                                <th>address</th>
+                                <td><%= result.employee %></td>
+                            </tr>
+
+                            <tr>
+                              <th> Resume  (IPFS URL)</th>
+                              <td>
+                                  <% if( result._url){ %>
+                                  <a href="https://ipfs.io/ipfs/<%= result._url %>"><%= result._url %></a>
+                                  <% } else { %>
+                                  <h4>Resume  not found !</h4>
+                                  <form method="POST" enctype="multipart/form-data" action="ipfs">
+                                      <input type="hidden" value="<%= empid %>" name="empidurl" />
+                                      <input type="file" name="uploadFile" required />
+                                      <br /><br />
+                                      <input type="submit" class="btn" value="Upload resume" />
+                                  </form>
+                                  <% } %>
+                              </td>
+                          </tr>
+
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
