@@ -54,7 +54,7 @@ var location = req.body.location;
       if(err) throw err;
       else{
       res.render("addjob.ejs");
-      console.log("jomol jaison kannampilly house kannikara")
+      console.log("ok!...")
       
       }
    });
